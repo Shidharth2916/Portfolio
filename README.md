@@ -1,5 +1,5 @@
 # Portfolio
-iOS Themed Developer Portfolio
+Developer Portfolio
 
 I made rough template of this website yet to refine more.
 
