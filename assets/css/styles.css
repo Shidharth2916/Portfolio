@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e0d6f0; /* Light purple background */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    color: #7e57c2; /* Medium purple color */
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.subtext {
+    font-style: italic;
+    color: #9575cd; /* Lighter purple color */
+}
+
+.loader {
+    margin: 20px auto;
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #7e57c2; /* Medium purple color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
