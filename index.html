@@ -3,15 +3,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Under Maintenance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffeaa7 0%, #dfe6e9 50%, #fab1a0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Character Scene */
+        .character-scene {
+            position: relative;
+            margin: 0 auto 3rem;
+            width: 300px;
+            height: 250px;
+        }
+
+        .tv {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 140px;
+            top: 20px;
+        }
+
+        .tv-screen {
+            width: 100%;
+            height: 110px;
+            background: #2d3436;
+            border-radius: 10px;
+            border: 8px solid #636e72;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tv-static {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #74b9ff 25%, #a29bfe 25%, #a29bfe 50%, #74b9ff 50%, #74b9ff 75%, #a29bfe 75%);
+            background-size: 4px 4px;
+            animation: tvStatic 0.5s linear infinite;
+        }
+
+        @keyframes tvStatic {
+            0% { background-position: 0 0; }
+            100% { background-position: 4px 4px; }
+        }
+
+        .tv-stand {
+            width: 60px;
+            height: 20px;
+            background: #636e72;
+            margin: 5px auto 0;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .character {
+            position: absolute;
+            left: 20px;
+            bottom: 30px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .head {
+            width: 60px;
+            height: 60px;
+            background: #ffeaa7;
+            border-radius: 50%;
+            position: relative;
+            border: 3px solid #fdcb6e;
+        }
+
+        .eye {
+            width: 12px;
+            height: 12px;
+            background: #2d3436;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            animation: blink 3s infinite;
+        }
+
+        .eye.left { left: 12px; }
+        .eye.right { right: 12px; }
+
+        @keyframes blink {
+            0%, 48%, 52%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.1); }
+        }
+
+        .mouth {
+            width: 20px;
+            height: 10px;
+            border: 2px solid #2d3436;
+            border-top: none;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .body {
+            width: 50px;
+            height: 40px;
+            background: #74b9ff;
+            margin: -5px auto 0;
+            border-radius: 0 0 25px 25px;
+            border: 3px solid #0984e3;
+        }
+
+        .popcorn {
+            position: absolute;
+            right: -40px;
+            top: 30px;
+            font-size: 2rem;
+            animation: float 1.5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-10deg); }
+            50% { transform: translateY(-8px) rotate(10deg); }
+        }
+
+        .gear {
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.6;
+        }
+
+        .gear1 {
+            top: 10px;
+            right: 20px;
+            animation: spin 4s linear infinite;
+        }
+
+        .gear2 {
+            bottom: 20px;
+            left: 10px;
+            animation: spin 3s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Main Message */
+        .main-message {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .main-message h1 {
+            font-size: 1.8rem;
+            color: #2d3436;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #636e72;
+            font-style: italic;
+        }
+
+        /* Fun Facts */
+        .fun-facts {
+            background: rgba(116, 185, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            border: 2px dashed #74b9ff;
+        }
+
+        .fact-label {
+            font-size: 1rem;
+            color: #0984e3;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .fact-text {
+            font-size: 1.1rem;
+            color: #2d3436;
+            min-height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Progress Section */
+        .progress-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .progress-label {
+            font-size: 1rem;
+            color: #636e72;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #dfe6e9;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+            border: 2px solid #b2bec3;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #74b9ff, #a29bfe, #fd79a8);
+            border-radius: 15px;
+            transition: width 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-percent {
+            font-size: 1.2rem;
+            color: #0984e3;
+            font-weight: 700;
+        }
+
+        /* Floating Tools */
+        .floating-tool {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: floatAround 15s ease-in-out infinite;
+        }
+
+        .tool1 {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .tool2 {
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .tool3 {
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        .tool4 {
+            bottom: 25%;
+            right: 10%;
+            animation-delay: 6s;
+        }
+
+        @keyframes floatAround {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(20px, -20px) rotate(90deg); }
+            50% { transform: translate(0, -40px) rotate(180deg); }
+            75% { transform: translate(-20px, -20px) rotate(270deg); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-message h1 {
+                font-size: 1.4rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .character-scene {
+                transform: scale(0.8);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Oops!</h1>
-        <p>We’ll be right back, probably binge-watching our favorite series.</p>
-        <p class="subtext">We promise it's worth the wait!</p>
-        <div class="loader"></div>
+        <!-- Animated Character -->
+        <div class="character-scene">
+            <div class="tv">
+                <div class="tv-screen">
+                    <div class="tv-static"></div>
+                </div>
+                <div class="tv-stand"></div>
+            </div>
+            <div class="character">
+                <div class="head">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="body"></div>
+                <div class="popcorn">🍿</div>
+            </div>
+            <div class="gear gear1">⚙️</div>
+            <div class="gear gear2">⚙️</div>
+        </div>
+
+        <!-- Main Message -->
+        <div class="main-message">
+            <h1>🛠️ Oops! We'll be right back — probably binge-watching our favorite series. 🍿</h1>
+            <p class="subtitle">We promise it's worth the wait!</p>
+        </div>
+
+        <!-- Fun Facts Section -->
+        <div class="fun-facts">
+            <div class="fact-label">💡 Meanwhile, here's something cool:</div>
+            <div class="fact-text" id="factText">Did you know honey never spoils?</div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-section">
+            <div class="progress-label" id="progressLabel">Recharging creativity…</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-percent" id="progressPercent">0%</div>
+        </div>
+
+        <!-- Floating Tools -->
+        <div class="floating-tool tool1">🔧</div>
+        <div class="floating-tool tool2">🔨</div>
+        <div class="floating-tool tool3">🛠️</div>
+        <div class="floating-tool tool4">⚡</div>
     </div>
+
+    <script>
+        // Fun facts array
+        const funFacts = [
+            "Did you know honey never spoils?",
+            "Fun fact: Bananas are berries, but strawberries aren't!",
+            "Developers need caffeine to compile feelings ☕",
+            "A group of flamingos is called a 'flamboyance' 🦩",
+            "Octopuses have three hearts! 🐙",
+            "The first computer bug was an actual bug (a moth!) 🦋",
+            "Penguins propose to their mates with a pebble 🐧",
+            "Your code works? Better not touch it! 😅",
+            "Sloths can hold their breath longer than dolphins! 🦥",
+            "There are more stars than grains of sand on Earth ✨",
+            "A day on Venus is longer than its year! 🪐",
+            "Rubber bands last longer when refrigerated 🔧"
+        ];
+
+        // Progress messages
+        const progressMessages = [
+            "Recharging creativity…",
+            "Updating awesome level…",
+            "Fixing things we probably broke 😅",
+            "Feeding the hamsters that power our servers 🐹",
+            "Teaching robots to dance 🤖",
+            "Brewing the perfect cup of code ☕",
+            "Untangling the internet cables 🔌",
+            "Convincing bits to behave properly 💾"
+        ];
+
+        let currentFactIndex = 0;
+        let currentProgressMessage = 0;
+        let progress = 0;
+
+        // Rotate fun facts
+        function rotateFact() {
+            const factText = document.getElementById('factText');
+            factText.style.animation = 'none';
+            setTimeout(() => {
+                currentFactIndex = (currentFactIndex + 1) % funFacts.length;
+                factText.textContent = funFacts[currentFactIndex];
+                factText.style.animation = 'fadeIn 0.5s ease-in';
+            }, 50);
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const progressFill = document.getElementById('progressFill');
+            const progressPercent = document.getElementById('progressPercent');
+            const progressLabel = document.getElementById('progressLabel');
+            
+            progress += Math.random() * 15 + 5;
+            
+            if (progress >= 100) {
+                progress = 0;
+                currentProgressMessage = (currentProgressMessage + 1) % progressMessages.length;
+                progressLabel.textContent = progressMessages[currentProgressMessage];
+            }
+            
+            progressFill.style.width = progress + '%';
+            progressPercent.textContent = Math.floor(progress) + '%';
+        }
+
+        // Initialize animations
+        setInterval(rotateFact, 4000);
+        setInterval(updateProgress, 800);
+
+        // Initial updates
+        rotateFact();
+        updateProgress();
+    </script>
 </body>
 </html>
