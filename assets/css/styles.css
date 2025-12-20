@@ -1,45 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #e0d6f0; /* Light purple background */
-    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #f4efe9, #ffffff);
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
+    max-width: 720px;
+    padding: 24px;
+    animation: fadeIn 1.4s ease;
 }
 
 h1 {
-    font-size: 50px;
-    color: #7e57c2; /* Medium purple color */
+    font-size: 56px;
+    color: #c62828;
+    margin-bottom: 18px;
 }
 
 p {
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 22px;
+    margin: 14px 0;
 }
 
 .subtext {
     font-style: italic;
-    color: #9575cd; /* Lighter purple color */
+    color: #2e7d32;
+}
+
+.wish {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 18px;
+    color: #ad1457;
+}
+
+.glow {
+    animation: glow 2s infinite alternate;
 }
 
 .loader {
-    margin: 20px auto;
-    border: 8px solid #f3f3f3; /* Light grey */
-    border-top: 8px solid #7e57c2; /* Medium purple color */
+    margin: 42px auto 0;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border: 8px solid rgba(0, 0, 0, 0.08);
+    border-top: 8px solid #2e7d32;
     animation: spin 1s linear infinite;
 }
 
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Snow */
+.snow::before,
+.snow::after {
+    content: "❄ ❄ ❄ ❄ ❄ ❄ ❄ ❄ ❄ ❄";
+    position: fixed;
+    top: -10%;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 22px;
+    animation: snow 10s linear infinite;
+    pointer-events: none;
+}
+
+.snow::after {
+    font-size: 30px;
+    opacity: 0.6;
+    animation-duration: 14s;
+}
+
+/* Footer */
+.copyright {
+    position: fixed;
+    bottom: 16px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+/* Animations */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-14px); }
+    60% { transform: translateY(-8px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 6px #ff8a80; }
+    to { text-shadow: 0 0 20px #ff5252; }
+}
+
+@keyframes snow {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(120%); }
 }
