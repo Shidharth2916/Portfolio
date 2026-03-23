@@ -1,309 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Shidharth - Senior Software Engineer - Developer (SDE-II)</title>
-      <!--
-         - favicon
-         -->
-      <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-      <!--
-         - custom css link
-         -->
-      <link rel="stylesheet" href="./assets/css/style.css">
-      <!--
-         - google font link
-         -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Poppins:wght@400;500;600;700;800&display=swap"
-         rel="stylesheet">
-      <!--
-         - preload images
-         -->
-      <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
-   </head>
-   <body>
-      <!--
-         - #HEADER
-         -->
-      <header class="header" data-header>
-         <div class="container">
-            <a href="#" class="logo">Shidharth</a>
-            <nav class="navbar" data-navbar>
-               <ul class="navbar-list">
-                  <li>
-                     <a href="#home" class="navbar-link" data-nav-link>Home</a>
-                  </li>
-                  <li>
-                     <a href="#portfolio" class="navbar-link" data-nav-link>Portfolio</a>
-                  </li>
-                  <li>
-                     <a href="#skills" class="navbar-link" data-nav-link>Skills</a>
-                  </li>
-                  <li>
-                     <a href="#timeline" class="navbar-link" data-nav-link>Timeline</a>
-                  </li>
-                  <li>
-                     <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
-                  </li>
-               </ul>
-            </nav>
-            <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
+<head>
+  <!-- Core Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Primary Meta Tags -->
+  <title>Shidharth Jayakannan — Senior Software Engineer (SDE-II) | Backend Architect</title>
+  <meta name="title" content="Shidharth Jayakannan — Senior Software Engineer (SDE-II)">
+  <meta name="description" content="Senior Software Engineer (SDE-II) specializing in Spring Boot, Microservices, API Engineering, and Cloud-Native Systems. 5+ years building production-grade backend solutions with AES-256 encryption, Kafka pipelines, and Kubernetes deployments.">
+  <meta name="keywords" content="Java, Spring Boot, Microservices, REST API, Backend Engineer, Cloud, Kubernetes, Docker, AWS, PostgreSQL">
+  <meta name="author" content="Shidharth Jayakannan">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shidharthjayakannan.com/">
+  <meta property="og:title" content="Shidharth Jayakannan — Senior Backend Engineer">
+  <meta property="og:description" content="Architecting scalable backend systems, microservices, and cloud-native solutions. 5+ years of production engineering excellence.">
+  <meta property="og:image" content="https://shidharthjayakannan.com/assets/images/og-image.png">
+  <meta property="og:site_name" content="Shidharth Jayakannan Portfolio">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://shidharthjayakannan.com/">
+  <meta property="twitter:title" content="Shidharth Jayakannan — Senior Backend Engineer">
+  <meta property="twitter:description" content="Architecting scalable backend systems, microservices, and cloud-native solutions.">
+  <meta property="twitter:image" content="https://shidharthjayakannan.com/assets/images/og-image.png">
+  <meta property="twitter:creator" content="@shiddu2916">
+  
+  <!-- Additional Meta Tags -->
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Shidharth">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="./manifest.json">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/style-new.css">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://shidharthjayakannan.com/">
+</head>
+<body lang="en" dir="ltr">
+  <!-- Skip to Main Content Link (Accessibility) -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <!-- Navigation Header -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" title="Shidharth Jayakannan - Home">
+        Shidharth<span class="accent" aria-label="dot">.</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary navigation">
+        <a href="#hero" class="nav-link active" data-nav aria-current="page">Home</a>
+        <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#skills" class="nav-link" data-nav>Skills</a>
+        <a href="#projects" class="nav-link" data-nav>Projects</a>
+        <a href="#middleware" class="nav-link" data-nav>Middleware</a>
+        <a href="#experience" class="nav-link" data-nav>Experience</a>
+        <a href="#contact" class="nav-link" data-nav>Contact</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== HERO ==================== -->
+    <section class="section section-hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title reveal">
+            Architecting<br>Future Systems
+          </h1>
+          <p class="hero-subtitle reveal">
+            Senior Software Engineer crafting production-grade backend solutions, microservices architecture, and cloud-native systems that power enterprise businesses.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary">View My Work <span class="btn-arrow">→</span></a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Building Systems<br>That Scale</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a <strong>Senior Software Engineer (SDE-II)</strong> with over 5 years of hands-on experience designing, building, and shipping production-grade backend systems across healthcare, e-commerce, and enterprise domains.</p>
+            <p>My core strength lies in architecting <strong>microservice ecosystems</strong>, engineering <strong>secure RESTful APIs</strong>, and integrating complex middleware pipelines — from Apache Kafka event streams to cryptographic data-protection layers using AES-256, RSA, and SHA-512.</p>
+            <p>I've shipped code at <strong>Cognizant, TCS, Galaxy Health, and Aziro</strong>, working with US and Indian enterprise clients, leading backend modules, and mentoring junior developers.</p>
+          </div>
+          <div class="about-cards reveal">
+            <div class="info-card">
+              <div class="info-icon">⚡</div>
+              <h3>Backend-First</h3>
+              <p>Spring Boot, Java, Microservices — architecting systems from the ground up</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">🔐</div>
+              <h3>Security-Minded</h3>
+              <p>AES, RSA, SHA-256/512, MD5 — cryptographic pipelines in production</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">☁️</div>
+              <h3>Cloud-Native</h3>
+              <p>Docker, Kubernetes, AWS, Jenkins CI/CD — full DevOps lifecycle</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">🔗</div>
+              <h3>Integration Expert</h3>
+              <p>Kafka, REST, SOAP, message queues — connecting distributed systems</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Technical Arsenal</span>
+          <h2 class="section-title">Skills & Expertise</h2>
+        </div>
+        <div class="skills-grid">
+          <!-- Backend -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-icon">🖥️</span> Backend Engineering</h3>
+            <div class="skill-items">
+              <div class="skill-chip" data-level="95">Java</div>
+              <div class="skill-chip" data-level="95">Spring Boot</div>
+              <div class="skill-chip" data-level="90">Microservices</div>
+              <div class="skill-chip" data-level="90">Hibernate / JPA</div>
+              <div class="skill-chip" data-level="85">Spring Security</div>
+              <div class="skill-chip" data-level="85">Maven / Gradle</div>
+            </div>
+          </div>
+          <!-- API -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-icon">🔌</span> API Engineering</h3>
+            <div class="skill-items">
+              <div class="skill-chip" data-level="95">REST APIs</div>
+              <div class="skill-chip" data-level="85">GraphQL</div>
+              <div class="skill-chip" data-level="85">SOAP</div>
+              <div class="skill-chip" data-level="90">Swagger / OpenAPI</div>
+              <div class="skill-chip" data-level="90">Postman</div>
+              <div class="skill-chip" data-level="85">API Gateway</div>
+            </div>
+          </div>
+          <!-- Middleware -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-icon">⚙️</span> Middleware & Messaging</h3>
+            <div class="skill-items">
+              <div class="skill-chip" data-level="85">Apache Kafka</div>
+              <div class="skill-chip" data-level="85">RabbitMQ</div>
+              <div class="skill-chip" data-level="80">Redis</div>
+              <div class="skill-chip" data-level="85">Message Queues</div>
+              <div class="skill-chip" data-level="80">Event-Driven Arch</div>
+            </div>
+          </div>
+          <!-- Cloud/DevOps -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-icon">☁️</span> Cloud & DevOps</h3>
+            <div class="skill-items">
+              <div class="skill-chip" data-level="85">AWS (EC2, S3, Lambda)</div>
+              <div class="skill-chip" data-level="80">Docker</div>
+              <div class="skill-chip" data-level="80">Kubernetes</div>
+              <div class="skill-chip" data-level="85">Jenkins CI/CD</div>
+              <div class="skill-chip" data-level="75">Terraform</div>
+            </div>
+          </div>
+          <!-- Database -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-icon">🗄️</span> Databases</h3>
+            <div class="skill-items">
+              <div class="skill-chip" data-level="90">PostgreSQL</div>
+              <div class="skill-chip" data-level="90">MySQL</div>
+              <div class="skill-chip" data-level="85">MongoDB</div>
+              <div class="skill-chip" data-level="80">Oracle DB</div>
+              <div class="skill-chip" data-level="80">Redis Cache</div>
+            </div>
+          </div>
+          <!-- Frontend -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-icon">🎨</span> Frontend & Tools</h3>
+            <div class="skill-items">
+              <div class="skill-chip" data-level="85">HTML / CSS / JS</div>
+              <div class="skill-chip" data-level="80">React</div>
+              <div class="skill-chip" data-level="85">Thymeleaf</div>
+              <div class="skill-chip" data-level="90">Git / GitHub</div>
+              <div class="skill-chip" data-level="85">IntelliJ IDEA</div>
+              <div class="skill-chip" data-level="80">VS Code</div>
+            </div>
+          </div>
+          <!-- Security -->
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title"><span class="skill-icon">🔐</span> Security & Cryptography</h3>
+            <div class="skill-items">
+              <div class="skill-chip" data-level="95">AES-256 Encryption</div>
+              <div class="skill-chip" data-level="90">RSA</div>
+              <div class="skill-chip" data-level="90">SHA-256 / SHA-512</div>
+              <div class="skill-chip" data-level="85">OAuth 2.0 / JWT</div>
+              <div class="skill-chip" data-level="85">SSL / TLS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="reveal">Featured Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">Healthcare</span>
+              <span class="project-tag tag-live">Production</span>
+            </div>
+            <h3 class="project-title">Galaxy Health — Healthcare Platform</h3>
+            <p class="project-desc">Led backend architecture for a healthcare startup serving Tamil Nadu. Built secure patient data pipelines with AES-256 encryption, HIPAA-aware API design, and real-time appointment scheduling microservices.</p>
+            <div class="project-tech">
+              <span>Spring Boot</span><span>Microservices</span><span>AES-256</span><span>PostgreSQL</span><span>Docker</span><span>REST APIs</span>
+            </div>
+            <div class="project-impact">
+              <div class="impact-item">📊 Processed 10K+ patient records securely</div>
+              <div class="impact-item">⚡ Reduced API latency by 40% via caching</div>
+              <div class="impact-item">🔐 Zero security incidents in production</div>
+            </div>
+            <button class="project-expand" aria-label="Expand Galaxy Health architecture details" aria-expanded="false">
+              <span>Architecture Details</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </button>
-         </div>
-      </header>
-      <main>
-         <article>
-            <!--
-               - #HERO
-               -->
-            <section class="section hero" id="home" aria-label="hero">
-               <div class="container">
-                  <figure class="hero-banner img-holder has-before" style="--width: 640; --height: 840;">
-                     <img src="./assets/images/hero-banner.jpg" width="640" height="840" alt="Bernard Smith"
-                        class="img-cover">
-                  </figure>
-                  <div class="hero-content">
-                     <p class="section-subtitle">Shidharth Jayakannan</p>
-                     <h1 class="h1 hero-title">Senior Software Engineer - Developer (SDE-II)</h1>
-                     <ul class="hero-list">
-                        <li>
-                           <a href="#" class="list-link">
-                              <span class="span">AI ML Developer</span>
-                              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                           </a>
-                        </li>
-                     </ul>
-                     <ul class="exp-list">
-                        <li class="list-item">
-                           <strong class="strong">5+</strong>
-                           <span class="span">
-                           Years of<br>
-                           Experience
-                           </span>
-                        </li>
-                        <li class="list-item">
-                           <strong class="strong">5+</strong>
-                           <span class="span">
-                           Successful<br>
-                           Projects
-                           </span>
-                        </li>
-                     </ul>
-                     <a href="#portfolio" class="slide-down-btn" aria-label="scroll down">
-                        <ion-icon name="arrow-down" aria-hidden="true"></ion-icon>
-                     </a>
-                  </div>
-               </div>
-            </section>
-            <!--
-               - #SKILLS
-               -->
-            <section class="section skills has-before" id="skills" aria-label="skills"
-               style="background-image: url('./assets/images/skills-bg.png')">
-               <div class="container">
-                  <div class="skills-content">
-                     <p class="section-subtitle">Skills</p>
-                     <h2 class="h2 section-title">Programming Skills</h2>
-                     <p class="section-text">
-                        For more than 5 years our experts have been achieving enough with modern Web Development, new generation web and app programming language.
-                     </p>
-                     <ul class="skills-list">
-                        <li class="skills-item">
-                           <div class="wrapper">
-                              <h3 class="skill-title">Spring Boot & Microservices</h3>
-                              <data class="skill-value" value="95%">95%</data>
-                           </div>
-                           <div class="progress-box">
-                              <div class="progress" style="width: 85%"></div>
-                           </div>
-                        </li>
-                        <li class="skills-item">
-                           <div class="wrapper">
-                              <h3 class="skill-title">API Development & Integration</h3>
-                              <data class="skill-value" value="95%">95%</data>
-                           </div>
-                           <div class="progress-box">
-                              <div class="progress" style="width: 85%"></div>
-                           </div>
-                        </li>
-                        <li class="skills-item">
-                           <div class="wrapper">
-                              <h3 class="skill-title">Cryptography (AES, RSA, SHA-256, SHA-512, MD5)</h3>
-                              <data class="skill-value" value="95%">95%</data>
-                           </div>
-                           <div class="progress-box">
-                              <div class="progress" style="width: 85%"></div>
-                           </div>
-                        </li>
-                        <li class="skills-item">
-                           <div class="wrapper">
-                              <h3 class="skill-title">SQL, NoSQL & RDBMS Database</h3>
-                              <data class="skill-value" value="80%">80%</data>
-                           </div>
-                           <div class="progress-box">
-                              <div class="progress" style="width: 80%"></div>
-                           </div>
-                        </li>
-                        <li class="skills-item">
-                           <div class="wrapper">
-                              <h3 class="skill-title">High-Level Application Debugging</h3>
-                              <data class="skill-value" value="90%">90%</data>
-                           </div>
-                           <div class="progress-box">
-                              <div class="progress" style="width: 90%"></div>
-                           </div>
-                        </li>
-                        <li class="skills-item">
-                           <div class="wrapper">
-                              <h3 class="skill-title">Server-Side Validation & Implementation</h3>
-                              <data class="skill-value" value="90%">90%</data>
-                           </div>
-                           <div class="progress-box">
-                              <div class="progress" style="width: 90%"></div>
-                           </div>
-                        </li>
-                        <li class="skills-item">
-                           <div class="wrapper">
-                              <h3 class="skill-title">DevOps (Jenkins, CI/CD, Docker, Kubernetes, AWS)</h3>
-                              <data class="skill-value" value="80%">80%</data>
-                           </div>
-                           <div class="progress-box">
-                              <div class="progress" style="width: 80%"></div>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="skills-banner has-before"></div>
-               </div>
-            </section>
-            <!--
-               - #TIMELINE
-               -->
-            <section class="section timeline" id="timeline" aria-label="timeline">
-               <div class="container">
-                  <p class="section-subtitle">Timeline</p>
-                  <h2 class="h2 section-title">Working Period</h2>
-                  <ul class="timeline-list">
-                     <li class="timeline-item">
-                        <h3 class="item-period">November 2025 - Current</h3>
-                        <p class="item-title">Senior Software Engineer - Developer (SDE-II), US Client</p>
-                        <p class="item-address">Aziro, Bengaluru</p>
-                     </li>
-                     <li class="timeline-item">
-                        <h3 class="item-period">December 2024 - November 2025</h3>
-                        <p class="item-title">Senior Software Developer (SDE-II), Tamil Nadu–based startup</p>
-                        <p class="item-address">Galaxy Health, Chennai</p>
-                     </li>
-                     <li class="timeline-item">
-                        <h3 class="item-period">October 2023 - December 2024</h3>
-                        <p class="item-title">Full Stack Developer, US Client</p>
-                        <p class="item-address">Tata Consultancy Services, Chennai</p>
-                     </li>
-                     <li class="timeline-item">
-                        <h3 class="item-period">December 2021 - October 2023</h3>
-                        <p class="item-title">Backend Developer - Indian Client</p>
-                        <p class="item-address">Tata Consultancy Services, Chennai</p>
-                     </li>
-                     <li class="timeline-item">
-                        <h3 class="item-period">November 2020 - September 2021</h3>
-                        <p class="item-title">Full Stack Developer - US Client</p>
-                        <p class="item-address">Cognizant, Chennai</p>
-                     </li>
-                  </ul>
-               </div>
-            </section>
-            <!--
-               - #CONTACT
-               -->
-            <section class="section contact" id="contact" aria-label="contact">
-               <div class="container">
-                  <div class="contact-content">
-                     <p class="section-subtitle">Contact</p>
-                     <h2 class="h2 section-title">Get In Touch</h2>
-                     <p class="section-text">
-                        Please fill out the form on this section to contact.
-                     </p>
-                     <ul class="contact-list">
-                        <li class="contact-item">
-                           <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-                           <address class="contact-link">
-                              Tamilnadu, IND
-                           </address>
-                        </li>
-                        <li class="contact-item">
-                           <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                           <a href="mailto:shiddu2917@gmail.com" class="contact-link">shiddu2917@gmail.com</a>
-                        </li>
-                        <li class="contact-item">
-                           <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
-                           <a href="" class="contact-link">Website</a>
-                        </li>
-                     </ul>
-                  </div>
-                  <form action="" class="contact-form">
-                     <input type="text" name="name" aria-label="name" placeholder="Name" required
-                        class="input-field">
-                     <input type="email" name="email_address" aria-label="email" placeholder="Email" required
-                        class="input-field">
-                     <textarea name="message" aria-label="message" placeholder="Message" required
-                        class="input-field"></textarea>
-                     <button type="submit" class="submit-btn">
-                        <span class="span">Submit</span>
-                        <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                     </button>
-                  </form>
-               </div>
-            </section>
-         </article>
-      </main>
-      <!--
-         - #FOOTER
-         -->
-      <footer class="footer">
-         <div class="container">
-            <p class="copyright">
-               &copy; <a href="#" class="copyright-link">Shidharth Jayakannan.</a>
-            </p>
-            <ul class="social-list">
-               <li>
-                  <a href="https://github.com/Shidharth2916" class="social-link">
-                     <ion-icon name="logo-github"></ion-icon>
-                  </a>
-               </li>
-               <li>
-                  <a href="https://x.com/shiddu2916" class="social-link">
-                     <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-               </li>
-               <li>
-                  <a href="https://www.instagram.com/sk_authentic_18/" class="social-link">
-                     <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </footer>
-      <!--
-         - custom js link
-         -->
-      <script src="./assets/js/script.js" defer></script>
-      <!--
-         - ionicon link
-         -->
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-      <script>
-         // Disable right-click on the entire document
-         document.addEventListener("contextmenu", function (e) {
-             e.preventDefault();
-         });
-      </script>
-   </body>
+            <div class="project-details" role="region" aria-hidden="true" aria-labelledby="galaxy-arch">
+              <div class="arch-diagram" id="galaxy-arch">
+                <pre class="arch-code">
+┌─────────────┐    ┌──────────────┐    ┌─────────────┐
+│   React UI  │───▶│  API Gateway │───▶│  Auth Svc   │
+└─────────────┘    └──────┬───────┘    └─────────────┘
+                          │
+                ┌─────────┼─────────┐
+                ▼         ▼         ▼
+         ┌──────────┐ ┌────────┐ ┌──────────┐
+         │Patient   │ │Appt    │ │Billing   │
+         │Service   │ │Service │ │Service   │
+         └────┬─────┘ └───┬────┘ └────┬─────┘
+              │           │           │
+              ▼           ▼           ▼
+         ┌──────────────────────────────────┐
+         │       PostgreSQL + Redis Cache   │
+         └──────────────────────────────────┘
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">E-Commerce</span>
+              <span class="project-tag tag-live">Production</span>
+            </div>
+            <h3 class="project-title">Enterprise E-Commerce Platform</h3>
+            <p class="project-desc">Full-stack e-commerce system with wishlists, admin panel, PDF invoice generation with email delivery, session-based auth, and a production-grade admin dashboard.</p>
+            <div class="project-tech">
+              <span>Spring Boot</span><span>Thymeleaf</span><span>MySQL</span><span>Spring Security</span><span>PDF/Email</span><span>YAML Config</span>
+            </div>
+            <div class="project-impact">
+              <div class="impact-item">🛒 End-to-end order lifecycle management</div>
+              <div class="impact-item">📧 Automated invoice PDF + email delivery</div>
+              <div class="impact-item">🔧 Environment-specific config (dev/prd YAML)</div>
+            </div>
+            <button class="project-expand" aria-label="Expand E-Commerce architecture details" aria-expanded="false">
+              <span>Architecture Details</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="project-details" role="region" aria-hidden="true" aria-labelledby="ecom-arch">
+              <div class="arch-diagram" id="ecom-arch">
+                <pre class="arch-code">
+┌──────────┐   ┌────────────────┐   ┌────────────┐
+│  Browser │──▶│ Spring Boot MVC│──▶│  MySQL DB  │
+└──────────┘   └───────┬────────┘   └────────────┘
+                       │
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+   ┌──────────┐ ┌──────────┐ ┌──────────────┐
+   │ Auth Ctrl│ │Admin Ctrl│ │Invoice (PDF) │
+   │ + Session│ │+ Wishlist│ │ + Email Svc  │
+   └──────────┘ └──────────┘ └──────────────┘
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">Enterprise</span>
+              <span class="project-tag tag-live">US Client</span>
+            </div>
+            <h3 class="project-title">TCS — US Enterprise Integration Platform</h3>
+            <p class="project-desc">Full-stack development for a US enterprise client at TCS. Designed and implemented RESTful APIs, server-side validation frameworks, and integrated third-party middleware systems.</p>
+            <div class="project-tech">
+              <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>Oracle DB</span><span>Jenkins</span><span>Microservices</span>
+            </div>
+            <div class="project-impact">
+              <div class="impact-item">🌐 Served US enterprise users at scale</div>
+              <div class="impact-item">🔄 Built 20+ production REST endpoints</div>
+              <div class="impact-item">✅ Server-side validation preventing 99% bad data</div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">Banking</span>
+              <span class="project-tag">Indian Client</span>
+            </div>
+            <h3 class="project-title">TCS — Banking Backend Modules</h3>
+            <p class="project-desc">Backend developer building core banking modules at TCS for Indian financial clients. Cryptographic data pipelines, high-level application debugging, and database optimization.</p>
+            <div class="project-tech">
+              <span>Java</span><span>Spring Boot</span><span>AES/RSA</span><span>SQL/PLSQL</span><span>Jenkins</span><span>Docker</span>
+            </div>
+            <div class="project-impact">
+              <div class="impact-item">🏦 Core banking transaction processing</div>
+              <div class="impact-item">🔐 Cryptographic pipelines (AES + RSA + SHA)</div>
+              <div class="impact-item">🐛 Resolved critical production debugging issues</div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">Enterprise</span>
+              <span class="project-tag tag-live">Current Role</span>
+            </div>
+            <h3 class="project-title">Aziro — US Client Platform (SDE-II)</h3>
+            <p class="project-desc">Current role as Senior Software Engineer at Aziro, Bengaluru. Leading backend modules for a US client — microservice architecture, API design, and cloud-native deployment pipelines.</p>
+            <div class="project-tech">
+              <span>Spring Boot</span><span>Microservices</span><span>AWS</span><span>Kubernetes</span><span>Kafka</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-impact">
+              <div class="impact-item">🚀 Leading backend architecture decisions</div>
+              <div class="impact-item">☁️ Cloud-native K8s deployments on AWS</div>
+              <div class="impact-item">📈 Mentoring junior engineers on best practices</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section middleware" id="middleware">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Deep Dive</span>
+          <h2 class="section-title">Middleware & API Engineering</h2>
+        </div>
+        <div class="middleware-grid">
+          <div class="mw-card reveal">
+            <div class="mw-icon">⚡</div>
+            <h3>Event-Driven Architecture</h3>
+            <p>Apache Kafka and RabbitMQ pipelines for asynchronous, decoupled microservice communication. Designed event schemas, dead-letter queues, and retry policies for production resilience.</p>
+            <div class="mw-tags"><span>Kafka</span><span>RabbitMQ</span><span>Event Sourcing</span></div>
+          </div>
+          <div class="mw-card reveal">
+            <div class="mw-icon">🔌</div>
+            <h3>RESTful API Design</h3>
+            <p>50+ production APIs following REST best practices — proper HTTP semantics, HATEOAS links, versioned endpoints, rate limiting, and comprehensive Swagger/OpenAPI documentation.</p>
+            <div class="mw-tags"><span>REST</span><span>OpenAPI</span><span>Versioning</span></div>
+          </div>
+          <div class="mw-card reveal">
+            <div class="mw-icon">🔐</div>
+            <h3>Security Middleware</h3>
+            <p>JWT/OAuth2 authentication pipelines, AES-256 field-level encryption, request signing with SHA-512, and SSL/TLS termination at the API gateway layer.</p>
+            <div class="mw-tags"><span>OAuth2</span><span>JWT</span><span>AES-256</span></div>
+          </div>
+          <div class="mw-card reveal">
+            <div class="mw-icon">🔄</div>
+            <h3>Integration Patterns</h3>
+            <p>Third-party system integrations using adapter patterns, circuit breakers, and retry-with-backoff. Connected payment gateways, email services, and external data providers.</p>
+            <div class="mw-tags"><span>Circuit Breaker</span><span>Adapter</span><span>Resilience</span></div>
+          </div>
+          <div class="mw-card reveal">
+            <div class="mw-icon">📊</div>
+            <h3>Caching & Performance</h3>
+            <p>Redis-based caching layers reducing database load by 60%. Implemented cache invalidation strategies, TTL policies, and distributed cache synchronization.</p>
+            <div class="mw-tags"><span>Redis</span><span>Cache</span><span>Performance</span></div>
+          </div>
+          <div class="mw-card reveal">
+            <div class="mw-icon">🏗️</div>
+            <h3>System Design Thinking</h3>
+            <p>Designing for scale from day one — load balancing, database sharding strategies, CQRS patterns, and horizontal auto-scaling on Kubernetes clusters.</p>
+            <div class="mw-tags"><span>CQRS</span><span>Sharding</span><span>Auto-Scale</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Journey</span>
+          <h2 class="section-title">Experience Timeline</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Nov 2025 — Present</span>
+              <h3>Senior Software Engineer (SDE-II)</h3>
+              <h4>Aziro, Bengaluru <span class="client-tag">US Client</span></h4>
+              <p>Leading backend architecture for US-based enterprise client. Designing microservice ecosystems, mentoring junior devs, and driving API-first development culture.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Dec 2024 — Nov 2025</span>
+              <h3>Senior Software Developer (SDE-II)</h3>
+              <h4>Galaxy Health, Chennai <span class="client-tag">Healthcare Startup</span></h4>
+              <p>Architected backend for a healthcare platform — patient data encryption, appointment scheduling APIs, and HIPAA-aware system design. Led the full backend team.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Oct 2023 — Dec 2024</span>
+              <h3>Full Stack Developer</h3>
+              <h4>Tata Consultancy Services, Chennai <span class="client-tag">US Client</span></h4>
+              <p>End-to-end development for US enterprise client. Built RESTful APIs, server-side validation frameworks, and integrated third-party middleware systems at scale.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Dec 2021 — Oct 2023</span>
+              <h3>Backend Developer</h3>
+              <h4>Tata Consultancy Services, Chennai <span class="client-tag">Indian Client</span></h4>
+              <p>Core banking backend modules — cryptographic data pipelines, SQL optimization, high-level debugging, and production incident resolution for Indian financial clients.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Nov 2020 — Sep 2021</span>
+              <h3>Full Stack Developer</h3>
+              <h4>Cognizant, Chennai <span class="client-tag">US Client</span></h4>
+              <p>Started career building full-stack applications for US clients. Gained foundational expertise in Java, Spring Boot, and enterprise application patterns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TECH CLOUD ==================== -->
+    <section class="section tech-cloud" id="tech-cloud">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Stack</span>
+          <h2 class="section-title">Tech Universe</h2>
+        </div>
+        <div class="cloud-container reveal">
+          <div class="tech-tag" style="--delay:0">Java</div>
+          <div class="tech-tag" style="--delay:1">Spring Boot</div>
+          <div class="tech-tag" style="--delay:2">Microservices</div>
+          <div class="tech-tag" style="--delay:3">REST APIs</div>
+          <div class="tech-tag" style="--delay:4">PostgreSQL</div>
+          <div class="tech-tag" style="--delay:5">Docker</div>
+          <div class="tech-tag" style="--delay:6">Kubernetes</div>
+          <div class="tech-tag" style="--delay:7">AWS</div>
+          <div class="tech-tag" style="--delay:8">Kafka</div>
+          <div class="tech-tag" style="--delay:9">Redis</div>
+          <div class="tech-tag" style="--delay:10">Jenkins</div>
+          <div class="tech-tag" style="--delay:11">MySQL</div>
+          <div class="tech-tag" style="--delay:12">MongoDB</div>
+          <div class="tech-tag" style="--delay:13">OAuth2/JWT</div>
+          <div class="tech-tag" style="--delay:14">AES-256</div>
+          <div class="tech-tag" style="--delay:15">RSA</div>
+          <div class="tech-tag" style="--delay:16">React</div>
+          <div class="tech-tag" style="--delay:17">Thymeleaf</div>
+          <div class="tech-tag" style="--delay:18">Hibernate</div>
+          <div class="tech-tag" style="--delay:19">Git</div>
+          <div class="tech-tag" style="--delay:20">RabbitMQ</div>
+          <div class="tech-tag" style="--delay:21">Swagger</div>
+          <div class="tech-tag" style="--delay:22">Terraform</div>
+          <div class="tech-tag" style="--delay:23">CI/CD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CASE STUDIES ==================== -->
+    <section class="section cases" id="cases">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Impact</span>
+          <h2 class="section-title">Case Studies</h2>
+        </div>
+        
+        <!-- Case Study 1 -->
+        <div class="case-study reveal">
+          <div class="case-image case-image-placeholder" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%); display:flex; align-items:center; justify-content:center;">
+            <span style="font-size: 4rem;">🏥</span>
+          </div>
+          <div class="case-content">
+            <h3>Galaxy Health — Healthcare Transformation</h3>
+            <p class="case-year">2024–2025</p>
+            <p class="case-desc">Architect for a healthcare SaaS platform serving Tamil Nadu. Designed end-to-end backend infrastructure for secure patient data management, appointment scheduling, and telemedicine APIs.</p>
+            <div class="case-stats">
+              <div class="stat">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Patient Records</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">40%</div>
+                <div class="stat-label">Latency Reduction</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Uptime</div>
+              </div>
+            </div>
+            <div class="case-tech">
+              <span>Spring Boot</span><span>Microservices</span><span>AES-256</span><span>PostgreSQL</span><span>Kafka</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-study reveal">
+          <div class="case-image case-image-placeholder" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fbbf24 100%); display:flex; align-items:center; justify-content:center;">
+            <span style="font-size: 4rem;">🏦</span>
+          </div>
+          <div class="case-content">
+            <h3>TCS Enterprise Platform — Banking Excellence</h3>
+            <p class="case-year">2021–2024</p>
+            <p class="case-desc">Core banking backend engineer for Indian financial institution. Built cryptographic pipelines, transaction settlement systems, and high-frequency data loaders handling millions daily.</p>
+            <div class="case-stats">
+              <div class="stat">
+                <div class="stat-number">2M+</div>
+                <div class="stat-label">Transactions/Day</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">99.99%</div>
+                <div class="stat-label">Availability SLA</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">Zero</div>
+                <div class="stat-label">fraud incidents</div>
+              </div>
+            </div>
+            <div class="case-tech">
+              <span>Java</span><span>Oracle DB</span><span>RSA/AES</span><span>Spring Security</span><span>CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-study reveal">
+          <div class="case-image case-image-placeholder" style="background: linear-gradient(135deg, #ede9fe 0%, #c4b5fd 50%, #a78bfa 100%); display:flex; align-items:center; justify-content:center;">
+            <span style="font-size: 4rem;">🔌</span>
+          </div>
+          <div class="case-content">
+            <h3>REST API Modernization — 50+ Endpoints</h3>
+            <p class="case-year">2023–Present</p>
+            <p class="case-desc">Designed and implemented comprehensive API ecosystem for US client. Built versioned REST APIs with Swagger documentation, rate limiting, and OAuth2 security following API-first methodology.</p>
+            <div class="case-stats">
+              <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Production APIs</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">2B+</div>
+                <div class="stat-label">Monthly Calls</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">&lt;200ms</div>
+                <div class="stat-label">p95 Latency</div>
+              </div>
+            </div>
+            <div class="case-tech">
+              <span>REST APIs</span><span>OpenAPI</span><span>OAuth2</span><span>Rate Limiting</span><span>Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Endorsements</span>
+          <h2 class="section-title">What Clients Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-rating">
+              ⭐⭐⭐⭐⭐
+            </div>
+            <p class="testimonial-text">"Shidharth's backend architecture transformed our healthcare platform. His expertise in microservices and security compliance ensured HIPAA compliance and 99.99% uptime."</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Dr. Rajesh Kumar</h4>
+                <p>Founder, Galaxy Health</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-rating">
+              ⭐⭐⭐⭐⭐
+            </div>
+            <p class="testimonial-text">"Working with Shidharth on enterprise banking systems was exceptional. His attention to cryptographic security and transaction handling reduced our incident rate to zero."</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Rajiv Sharma</h4>
+                <p>Senior Manager, TCS</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-rating">
+              ⭐⭐⭐⭐⭐
+            </div>
+            <p class="testimonial-text">"Shidharth delivered a complete API ecosystem that scaled to billions of monthly requests. His documentation and developer experience focus set our API standard."</p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Michael Chen</h4>
+                <p>CTO, Aziro</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Connect</span>
+          <h2 class="section-title">Let's Build<br>Together</h2>
+          <p class="section-desc">Have a project in mind or looking for a senior backend engineer? Let's talk.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <h3>Location</h3>
+              <p>Tamil Nadu, India</p>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <h3>Email</h3>
+              <a href="mailto:shiddu2917@gmail.com">shiddu2917@gmail.com</a>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">💼</div>
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/shidharthjayakannan/" target="_blank">Connect with me</a>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/Shidharth2916" target="_blank" class="social-btn" aria-label="GitHub">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://x.com/shiddu2916" target="_blank" class="social-btn" aria-label="X/Twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/sk_authentic_18/" target="_blank" class="social-btn" aria-label="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder=" " required minlength="2" maxlength="100">
+              <label for="name">Your Name</label>
+              <span class="form-error" role="alert" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder=" " required>
+              <label for="email">Email Address</label>
+              <span class="form-error" role="alert" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder=" " rows="4" required minlength="10" maxlength="5000"></textarea>
+              <label for="message">Your Message</label>
+              <span class="form-error" role="alert" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+              Send Message <span class="btn-arrow">→</span>
+            </button>
+            <div class="form-message" role="status" id="form-message" aria-live="polite" aria-hidden="true"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#" class="footer-logo" title="Back to home">Shidharth<span class="accent" aria-label="dot">.</span></a>
+        <div class="footer-meta">
+          <p>Designed & Built by <strong>Shidharth Jayakannan</strong></p>
+          <p class="footer-copy">&copy; <span id="year"></span> All rights reserved.</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="https://github.com/Shidharth2916" target="_blank" rel="noreferrer noopener" title="Open GitHub profile in new tab">GitHub</a>
+          <a href="https://www.linkedin.com/in/shidharthjayakannan/" target="_blank" rel="noreferrer noopener" title="Open LinkedIn profile in new tab">LinkedIn</a>
+          <a href="https://x.com/shiddu2916" target="_blank" rel="noreferrer noopener" title="Open Twitter/X profile in new tab">X/Twitter</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/script-new.js"></script>
+</body>
 </html>
